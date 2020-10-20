@@ -1,26 +1,48 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: () => import(/* webpackChunkName: "home" */ "../views/Home.vue"),
   },
   {
-    path: '/home',
-    redirect: '/'
+    path: "/home",
+    redirect: "/",
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+    path: "/projects/central-vibrance",
+    name: "CentralVibrance",
+    component: () =>
+      import(
+        /* webpackChunkName: "central-vibrance" */ "../views/projects/CentralVibrance.vue"
+      ),
+  },
+  {
+    path: "/projects/noise-density",
+    name: "NoiseDensity",
+    component: () =>
+      import(
+        /* webpackChunkName: "diagonal" */ "../views/projects/NoiseDensity.vue"
+      ),
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
-})
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      }
+    } else if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { top: 0 };
+    }
+  },
+});
 
-export default router
+export default router;
