@@ -1,20 +1,48 @@
 <template>
   <div class="home">
-    <Plate 
-      src="https://res.cloudinary.com/demo/image/upload/sample.jpg" 
-      title="STROKES OF PAINT ON CANVAS" 
-      href="https://google.com"
-    />
+    <div class="home__banner">
+      Generatively
+    </div>
+    <ProjectsList class="home__projects" id="projects" />
   </div>
 </template>
 
 <script>
-import Plate from '@/components/Plate.vue'
+import ProjectsList from "@/components/ProjectsList.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    Plate
+    ProjectsList,
+  },
+};
+</script>
+
+<style scoped>
+.home {
+  overflow: hidden;
+}
+
+.home__banner {
+  display: grid;
+  height: 50vh;
+  place-items: center;
+  font-size: 5em;
+  font-family: "Italiana", serif;
+  letter-spacing: 0.1em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.home__projects {
+  min-height: 50vh;
+  overflow: visible;
+}
+
+@media (max-width: 1100px) {
+  .home__banner {
+    font-size: 2em;
+    white-space: initial;
   }
 }
-</script>
+</style>
