@@ -131,8 +131,13 @@ export default {
   }
 
   @media (min-width: 800px) {
+    .card:hover .card__dimmer {
+      transition-delay: 0.6s;
+    }
+    
     .card:hover .card__image {
       transform: scale(0.75);
+      transition-delay: 0.6s;
     }
 
     .card:hover .card__title-scaler {
