@@ -45,7 +45,7 @@ body {
   width: calc(100vw + 30px);
   height: calc(100vh + 30px);
   overflow: hidden;
-  opacity: 0.15;
+  opacity: 0.4;
   filter: blur(15px);
   background-image: url("./media/grain.gif");
   background-size: cover;
