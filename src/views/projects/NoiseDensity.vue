@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <span class="header__text">Noise Density</span>
+    <span class="header__text">Density</span>
   </div>
   <div class="image-collage">
     <div
