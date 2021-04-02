@@ -12,7 +12,7 @@
         class="projects__item"
         style="font-family: Bagnard"
         src="https://res.cloudinary.com/generatively/image/upload/w_800,f_auto/v1602752058/noise_grain/focus.jpg"
-        >NOISE<br />DENSITY</ImageCard
+        >DENSITY</ImageCard
       >
     </router-link>
   </div>
