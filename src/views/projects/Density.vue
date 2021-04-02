@@ -170,5 +170,6 @@ export default {
   left: 50%;
   max-width: 90vw;
   max-height: 90vh;
+  border-radius: 5pt;
 }
 </style>
