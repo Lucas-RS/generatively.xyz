@@ -19,11 +19,11 @@ const routes = [
       ),
   },
   {
-    path: "/projects/noise-density",
-    name: "NoiseDensity",
+    path: "/projects/density",
+    name: "Density",
     component: () =>
       import(
-        /* webpackChunkName: "diagonal" */ "../views/projects/NoiseDensity.vue"
+        /* webpackChunkName: "diagonal" */ "../views/projects/Density.vue"
       ),
   },
 ];

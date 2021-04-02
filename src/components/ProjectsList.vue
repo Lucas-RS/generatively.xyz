@@ -7,7 +7,7 @@
         >CENTRAL<br />VIBRANCE</ImageCard
       >
     </router-link>
-    <router-link to="/projects/noise-density">
+    <router-link to="/projects/density">
       <ImageCard
         class="projects__item"
         style="font-family: Bagnard"
